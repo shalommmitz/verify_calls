@@ -1,0 +1,10 @@
+import myModule
+import verify_calls
+
+v = verify_calls.Verify("VERIFY", "recording_p3")
+
+myModule.myFunction = v.verify(myModule.myFunction)
+
+v.file_indexs["myFunction"] = 4        # Start calling from the 4th call
+
+ans = myModule.myFunction(*args, **kwargs)
